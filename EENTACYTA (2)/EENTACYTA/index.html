@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bebas+Neue&family=Kalam:wght@300;400;700&family=Pacifico&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="carita_feliz-DIONE.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=DynaPuff:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Itim&family=Playwrite+DE+Grund:wght@100..400&display=swap');
+        </style>
+</head>
+
+<body>
+
+
+    
+    <header>
+        <h1 class="titulo"><i class="fa-solid fa-shield-dog fa-beat-fade"></i>Bienvenidos a PetPix <i class="fa-solid fa-shield-cat fa-beat-fade"></i>  </h1>
+        <div id="user-info">
+            <img id="fotoPerfil" src="user.jpg" alt="Foto de perfil" width="100">
+            <h2 style="color: white;" id="displayName">Usuario</h2>
+            <button data-bs-toggle="modal" data-bs-target="#actualizarModal">Actualizar Perfil</button>
+            <button id="logoutButton">Cerrar sesión</button>
+        </div>
+    </header>
+
+ <!-- Div de perfiles falsos -->
+
+ <main>
+    <!-- Contenido principal -->
+    
+    <div id="content">
+        <!-- Aquí va el contenido principal de la página -->
+    </div>
+
+    <!-- Barra lateral de perfiles -->
+    <div id="sidebar">
+        <div class="icon"><i class="fas fa-user-friends"></i></div>
+        <h2>Amigos</h2>
+        <div class="profile">
+            <img src="https://i.pinimg.com/564x/1c/a7/64/1ca764dc92c1728dec6e94ba7b00f790.jpg" alt="Perfil 1" class="foto-perfil">
+            <a href="Alex.html">Alex_Creative</a>
+        </div>
+        <div class="profile">
+            <img src="https://i.pinimg.com/564x/b9/06/05/b906058724040b88b22573a473a80de7.jpg" alt="Perfil 2" class="foto-perfil">
+            <a href="Luna.html">Luna_Star</a>
+        </div>
+        <div class="profile">
+            <img src="https://i.pinimg.com/564x/6c/85/48/6c8548956baf0b29b683b4d5fb1f8420.jpg" alt="Perfil 3" class="foto-perfil">
+            <a href="Mia.html">Mia_Traveler</a>
+        </div>
+        <div class="profile">
+            <img src="https://i.pinimg.com/564x/48/c7/5f/48c75fc65d1c7508e37e59ad5c125840.jpg" alt="Perfil 4" class="foto-perfil">
+            <a href="profile4.html">Leo_Writer</a>
+        </div>
+        <div class="profile">
+            <img src="https://i.pinimg.com/564x/b5/22/a4/b522a4ec70f29ab873d94f9f371a0fee.jpg" alt="Perfil 5" class="foto-perfil">
+            <a href="profile4.html">Luana_Vibes</a>
+        </div>
+        
+    </div>
+</main>
+
+
+    
+    <main>
+        
+        <div class="publicaciones">
+            <section class="publicacion">
+                <textarea name="" id="nueva_publicacion" placeholder="¿Qué estás pensando?" class="pensamiento"></textarea>
+                <div class="acciones">
+                    <section>
+                        <label for="foto_publicacion" class="icono"><i class="fa-solid fa-image"></i></label>
+                        <input type="file" id="foto_publicacion" accept="image/*" style="display: none;">
+                        <label for="video_publicacion" class="icono"><i class="fa-solid fa-video"></i></label>
+                        <input type="file" id="video_publicacion" accept="video/*" style="display: none;">
+                    </section>
+                    <button type="button" id="publicar" class="btn_publicar">Publicar</button>
+                </div>
+            </section>
+            <section id="publicaciones" class="publicaciones"></section>
+        </div>
+
+
+        <!-- Modal para editar publicación -->
+        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="editarModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editarModalLabel">Editar Publicación</h5>
+                    </div>
+                    <div class="modal-body">
+                        <textarea id="nuevoTexto" class="form-control" placeholder="Escribe la nueva publicación..."></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" id="guardarCambios">Guardar cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para actualizar usuario y foto -->
+        <div class="modal fade" id="actualizarModal" tabindex="-1" aria-labelledby="actualizarModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content btn_publicar">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="actualizarModalLabel">Actualizar Perfil</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="nuevoNombre" class="form-label">Nuevo Nombre de Usuario</label>
+                            <input type="text" id="nuevoNombre" class="form-control" placeholder="Ingresa tu nuevo nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nuevaFoto" class="form-label">Nueva Foto de Perfil</label>
+                            <input type="file" id="nuevaFoto" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="publicacion" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="guardarPerfil">Guardar Cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>

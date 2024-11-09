@@ -1,0 +1,501 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(https://i.pinimg.com/564x/05/2d/de/052dde0499300c6282f087b13c22d9e9.jpg);
+  margin: 0;
+  padding: 10px;
+}
+
+
+
+/* Estilo para los perfiles falsos */
+#fake-profiles {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  max-height: 400px;
+  /* Establece una altura máxima */
+  overflow-y: auto;
+  /* Agrega un scroll si el contenido excede el tamaño del div */
+}
+
+
+/* Estilo para la barra lateral */
+#sidebar {
+  width: 150px;
+  /* Ajusta el ancho de la barra lateral */
+  position: fixed;
+  /* Fija la barra al lado izquierdo de la pantalla */
+  top: 0;
+  /* Empieza desde la parte superior */
+  right: 0;
+  /* Puede ser "left: 0" si la quieres del lado izquierdo */
+  background-color: #ffffff;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 100vh;
+  /* Asegura que ocupe toda la altura de la pantalla */
+  overflow-y: auto;
+  /* Permite desplazarse si hay muchos perfiles */
+  text-align: center;
+
+}
+
+#sidebar h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.profile a {
+  text-decoration: none;
+  color: #3b5998;
+  font-weight: bold;
+}
+
+/* Ajustes para el texto y las imágenes */
+.profile a:hover {
+  color: #1d3d8c;
+}
+
+
+
+
+/* Limitar tamaño de las imágenes publicadas */
+.publicacion img {
+  max-width: 100%;
+  /* Para que la imagen no exceda el ancho de la publicación */
+  height: auto;
+  /* Mantener la proporción */
+  border-radius: 10px;
+  /* Opcional: redondear esquinas de la imagen */
+  margin-top: 10px;
+}
+
+
+.publicacion {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.titulo {
+
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  background-color: #645228bb;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(248, 248, 248, 0.993);
+  text-align: center;
+  color: #f9fbff;
+}
+
+#user-info {
+  background-image: url(  https://i.pinimg.com/736x/44/b5/b7/44b5b76b40e1692616f1a4f327220afe.jpg);
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(248, 248, 248, 0.993);
+}
+
+#fotoPerfil {
+  border-radius: 50%;
+  border: 2px solid #3b5998;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[data-bs-toggle="modal"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#logoutButton {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Estilo para los perfiles sugeridos */
+#fake-profiles {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#fake-profiles h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.profile {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.profile a {
+  text-decoration: none;
+  color: #3b5998;
+  font-weight: bold;
+}
+
+/* Estilo para el contenedor de publicación */
+.publicacion-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 80px;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.opciones-publicacion {
+  margin-top: 20px;
+  display: flex;
+  /* Cambio: para poner los iconos en fila */
+  justify-content: center;
+  /* Centrado horizontal */
+  gap: 20px;
+  /* Espacio entre los iconos */
+}
+
+label {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+input[type="file"] {
+  padding: 8px;
+  margin-top: 10px;
+  display: none;
+}
+
+/* Contenedor de publicaciones */
+#publicaciones {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo de cada publicación */
+.publicacion {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 710px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  /* Espaciado entre los elementos de la publicación */
+}
+
+/* Encabezado de cada publicación */
+.publicacion-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  /* Línea sutil debajo del encabezado */
+  padding-bottom: 10px;
+}
+
+/* Imagen de perfil en un círculo */
+.foto-perfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid #4CAF50;
+  /* Borde verde alrededor de la foto de perfil */
+}
+
+/* Información del usuario y fecha */
+.info-usuario {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-usuario h4 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+
+.info-usuario h4 {
+  font-size: 16px;
+  margin: 0;
+  color: bla;
+}
+
+.info-usuario small {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Contenido de la publicación */
+.contenido-publicacion {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+  /* Justificar el texto para un diseño más ordenado */
+  word-wrap: break-word;
+}
+
+/* Estilo para los botones de editar y eliminar */
+.publicacion-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.boton-editar,
+.boton-eliminar {
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.boton-editar:hover {
+  background-color: #4CAF50;
+  /* Verde cuando se pasa el ratón por encima */
+  color: #fff;
+}
+
+.boton-eliminar:hover {
+  background-color: #f44336;
+  /* Rojo para eliminar */
+  color: #fff;
+}
+
+/* Añadir espacio entre publicaciones */
+#publicaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilo de los iconos en los botones */
+.icon-button {
+  background-color: #f1f1f1;
+  border: 2px solid #ddd;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background-color: #4CAF50;
+  transform: scale(1.1);
+}
+
+/* Estilo para el botón de publicar */
+#publicar {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+}
+
+#publicar:hover {
+  background-color: #45a049;
+}
+
+
+
+/* Limitar tamaño de las imágenes publicadas */
+.publicacion img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Diseño para dispositivos pequeños */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 24px;
+    /* Ajustamos el tamaño del título para pantallas más pequeñas */
+    padding: 20px;
+  }
+
+  #user-info {
+    padding: 15px;
+  }
+
+  #fotoPerfil {
+    width: 80px;
+    /* Hacemos la foto de perfil más pequeña en pantallas pequeñas */
+    height: 80px;
+  }
+
+  .publicacion {
+    width: 100%;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 100%;
+  }
+
+  .publicacion-header {
+    flex-direction: column;
+    /* Cambiar a columna en pantallas pequeñas */
+    align-items: flex-start;
+  }
+
+  .foto-perfil {
+    width: 40px;
+    height: 40px; 
+  }
+
+  .publicacion-footer {
+    flex-direction: column;
+    /* Botones en columna en pantallas pequeñas */
+    align-items: flex-start;
+  }
+
+  .btn_publicar {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .acciones {
+    display: block;
+    text-align: center;
+  }
+
+  .opciones-publicacion {
+    justify-content: space-evenly;
+  }
+
+  .profile img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Diseño para pantallas más grandes */
+@media (min-width: 769px) {
+  .titulo {
+    font-size: 32px;
+    padding: 40px;
+  }
+
+  #user-info {
+    padding: 20px;
+  }
+
+  .publicacion {
+    width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .publicacion-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .foto-perfil {
+    width: 50px;
+    height: 50px;
+  }
+
+  .publicacion-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

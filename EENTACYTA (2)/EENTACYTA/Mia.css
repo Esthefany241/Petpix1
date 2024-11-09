@@ -1,0 +1,178 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://i.pinimg.com/564x/05/2d/de/052dde0499300c6282f087b13c22d9e9.jpg);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info {
+    margin-right: auto;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-actions button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0095f6;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Profile Stats */
+.profile-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat p:last-child {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Profile Tabs */
+.profile-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.profile-tabs button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-tabs button.active {
+    background-color: #fff;
+    border-bottom: 2px solid #0095f6;
+}
+
+/* Profile Content */
+.profile-content {
+    margin-top: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Posts */
+.post {
+    width: 33.33%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+
+
+.post img {
+    width: 90%;
+    height: auto;
+
+}
+
+/* Highlights */
+.highlight {
+    width: 33.33%;
+    float: left;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.highlight img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.highlight p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .post {
+        width: 50%;
+    }
+    .highlight {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .post {
+        width: 100%;
+    }
+    .highlight {
+        width: 100%;
+    }
+}
+
+
+
+
+
